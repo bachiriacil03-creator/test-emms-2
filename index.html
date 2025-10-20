@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EMMS - Espace de Matériel Médical et Santé. Fournisseur de matériel médical et de laboratoire de qualité en Algérie.">
+    <meta name="keywords" content="matériel médical, équipement laboratoire, EMMS, santé, Algérie">
+    <meta name="author" content="EMMS">
+    <title>EMMS - Espace de Matériel Médical et Santé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+            (function(){
+            emailjs.init({publicKey: "HIibJBmvIR-19Y4hu",});
+        })();
+    </script>
+     
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>zabana , Blida</span>
+            </div>
+            <div class="top-bar-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:0770847775"> 0770847775</a>/<a href="tel:0780026635">0780026635 </a>
+            </div>
+            <div class="top-bar-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:emmsmedical@gmail.com">emmsmedical@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <!--<i class="fas emms"></i>-->
+                <img src="assets/emms.svg" alt="">
+                EMMS
+            </a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher des produits...">
+                <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active" onclick="showPage('home')">Accueil</a></li>
+                <li><a href="#about" onclick="showPage('home'); setTimeout(() => scrollToSection('about'), 100)">À Propos</a></li>
+                <li><a href="#" onclick="showPage('products')">Produits</a></li>
+                <li><a href="#contact" onclick="showPage('home'); setTimeout(() => scrollToSection('contact'), 100)">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div id="homePage">
+        
+        <section class="hero">
+            <div class="container">
+                <h1>Espace de Matériel Médical et Santé</h1>
+                <p>Votre partenaire de confiance pour l'équipement médical et de laboratoire</p>
+                <div class="brand-showcase">
+                    <div class="brand-logo">
+                        <img src="assets/1.webp" alt="Brand 1" onerror="this.parentElement.innerHTML='<strong>SIEMENS</strong>'">
+                    </div>
+                    <div class="brand-logo">
+                        <img src="assets/2.webp" alt="Brand 2" onerror="this.parentElement.innerHTML='<strong>GE</strong>'">
+                    </div>
+                    <div class="brand-logo">
+                        <img src="assets/3.webp" alt="Brand 3" onerror="this.parentElement.innerHTML='<strong>PHILIPS</strong>'">
+                    </div>
+                    <div class="brand-logo">
+                        <img src="assets/4.webp" alt="Brand 4" onerror="this.parentElement.innerHTML='<strong>ROCHE</strong>'">
+                    </div>
+                    <div class="brand-logo">
+                        <img src="assets/5.webp" alt="Brand 4" onerror="this.parentElement.innerHTML='<strong>ROCHE</strong>'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">À Propos de EMMS</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>EMMS (Espace de Matériel Médical et Santé) est une entreprise spécialisée dans la vente et la distribution d’équipements médicaux et de matériel de laboratoire. Elle propose une large gamme de produits destinés aux établissements de santé, aux laboratoires d’analyses, aux cliniques, ainsi qu’aux professionnels du secteur médical et scientifique.
+                            EMMS s’engage à offrir des solutions fiables et innovantes, répondant aux normes de qualité et de sécurité, afin d’accompagner efficacement ses clients dans leurs activités médicales et de recherche.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <strong>Qualité Garantie</strong>
+                                    <p>Produits certifiés</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <strong>Livraison Rapide</strong>
+                                    <p>Partout en Algérie</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-headset"></i>
+                                <div>
+                                    <strong>Support 24/7</strong>
+                                    <p>Service client dédié</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-certificate"></i>
+                                <div>
+                                    <strong>Certifications</strong>
+                                    <p>Normes internationales</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/main.jpg" alt="EMMS Medical equipement de laboratoire" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect fill=\'%23f0f0f0\' width=\'600\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'24\' fill=\'%23666\'%3EEMMS Medical%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="brand-carousel">
+            <div class="container">
+                <h2 class="section-title">Nos Marques Partenaires</h2>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="products-preview">
+            <div class="container">
+                <h2 class="section-title">Produits Vedettes</h2>
+                <div class="products-grid" id="featuredProducts"></div>
+                <div class="view-more-container">
+                    <button class="btn" onclick="showPage('products')">Voir Tous Les Produits</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contactez-Nous</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>zabana, Blida</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <a href="tel:0780026635">0780026635 </a><a href="tel:0770847775"> 0770847775</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:emmsmedical@gmail.com">emmsmedical@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Dim - Jeu: 8h00 - 16h00</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 15px;">Suivez-Nous</h4>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/emms_medical?igsh=MXN1eGp2a2lmMmJjZw==" class="social-link instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/share/16ywnhEtoq/" class="social-link facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="mailto:emmsmedical@gmail.com" class="social-link email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="tel: 0780026635" class="social-link phone">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1907.411686950179!2d2.7945186546167!3d36.48482444579327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128f0dc198803b43%3A0x82df13ffddc2fe01!2sBlida!5e0!3m2!1sfr!2sdz!4v1760454596087!5m2!1sfr!2sdz" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    <div id="productsPage" style="display: none;">
+        <section class="products-page">
+            <div class="container">
+                <h2 class="section-title">Nos Produits</h2>
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label>Filtrer par marque:</label>
+                        <select id="brandFilter" onchange="filterProducts()">
+                            <option value="all">Toutes les marques</option>
+                        </select>
+                        <label>Catégorie:</label>
+                        <select id="categoryFilter" onchange="filterProducts()">
+                            <option value="all">Toutes les catégories</option>
+                            <option value="Réactifs chemiques">Réactifs chemiques</option>
+                            <option value="milieux de culture">milieux de culture</option>
+                            <option value="verrerie et consomables">verrerie et consomables</option>
+                            <option value="equipement de laboratoire">equipement de laboratoire</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="allProducts"></div>
+            </div>
+        </section>
+    </div>
+
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>EMMS</h3>
+                <p>Espace de Matériel Médical et Santé</p>
+                <p>Votre partenaire de confiance pour l'équipement médical et de laboratoire de haute qualité.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <a href="#" onclick="showPage('home')">Accueil</a>
+                <a href="#about" onclick="showPage('home'); setTimeout(() => scrollToSection('about'), 100)">À Propos</a>
+                <a href="#" onclick="showPage('products')">Produits</a>
+                <a href="#contact" onclick="showPage('home'); setTimeout(() => scrollToSection('contact'), 100)">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> zabana , Blida</p>
+                <p><i class="fas fa-phone"></i> 07 80 02 66 35 / 07 70 84 77 75</p>
+                <p><i class="fas fa-envelope"></i> emmsmedical@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-Nous</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/emms_medical?igsh=MXN1eGp2a2lmMmJjZw==" class="social-link instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/16ywnhEtoq/" class="social-link facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:emmsmedical@gmail.com" class="social-link email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EMMS - Espace de Matériel Médical et Santé. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalProductName"></h2>
+                <p id="modalProductBrand"></p>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="product-detail">
+                    <div>
+                        <img id="modalProductImage" class="product-detail-image" alt="">
+                    </div>
+                    <div>
+                        <div class="product-specs">
+                            <h4>Spécifications</h4>
+                            <p><strong>Marque:</strong> <span id="modalBrandSpec"></span></p>
+                            <p><strong>Modèle:</strong> <span id="modalModelSpec"></span></p>
+                            <p><strong>Catégorie:</strong> <span id="modalCategorySpec"></span></p>
+                        </div>
+                        <div class="product-specs">
+                            <h4>Description</h4>
+                            <p id="modalDescription"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-form">
+                    <h3>Commander ce Produit</h3>
+                    <form id="orderForm" onsubmit="submitOrder(event)">
+                        <div class="form-group">
+                            <label>Nom Complet *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message / Quantité</label>
+                            <textarea name="message" id="textra-ar" placeholder="Indiquez la quantité souhaitée et toute information complémentaire..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer la Demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Product Data
+        const products =[
+    {
+        "id": "a365350b",
+        "name": "Acide heptane sulfonique-1 sel de sodium (25Gr) (ANH)",
+        "brand": "Tm media",
+        "model": "1894",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a365350b.png"
+    },
+    {
+        "id": "287fbe15",
+        "name": "1-Hexane sulphonique acide sodium Sel anhydre grade HPLC (25G)",
+        "brand": "LOBA",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_287fbe15.png"
+    },
+    {
+        "id": "3b709c56",
+        "name": "1-Octane sulfonique acide sodium sel grade HPLC (25G)",
+        "brand": "Loba",
+        "model": "5038",
+        "type": "Réactifs chemiques",
+        "image_file": "product_3b709c56.png"
+    },
+    {
+        "id": "5ac498bb",
+        "name": "1-Pentane sulfonique acide sodium sel anhydre grade HPLC (25G)",
+        "brand": "Loba",
+        "model": "05141",
+        "type": "Réactifs chemiques",
+        "image_file": "product_5ac498bb.png"
+    },
+    {
+        "id": "0f55db79",
+        "name": "2-Butanone extra pure (1L)",
+        "brand": "Clcm",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_0f55db79.png"
+    },
+    {
+        "id": "1703b42e",
+        "name": "2-Propanol (iso-propanol) extra pure (1L)",
+        "brand": "CLCM",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_1703b42e.jpeg"
+    },
+    {
+        "id": "d3202eec",
+        "name": "Acetonitrile, CHROMASOLV™ Plus, for HPLC, ≥99.9% (2.5L) Honeywell™",
+        "brand": "Honeywell",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_d3202eec.png"
+    },
+    {
+        "id": "552009c4",
+        "name": "Acide Chlorhydrique 37% (2.5L)",
+        "brand": "Honeywell",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_552009c4.png"
+    },
+    {
+        "id": "75975290",
+        "name": "Acide Formique 98-100% (1L)",
+        "brand": "Merck",
+        "model": "1.00264.1000",
+        "type": "Réactifs chemiques",
+        "image_file": "product_75975290.png"
+    },
+    {
+        "id": "24232c2a",
+        "name": "Acide acétique 100% (2.5L)",
+        "brand": "Honeywell",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_24232c2a.png"
+    },
+    {
+        "id": "7f626e32",
+        "name": "Acide borique AR/ACS (500G)",
+        "brand": "Loba",
+        "model": "2220",
+        "type": "Réactifs chemiques",
+        "image_file": "product_7f626e32.png"
+    },
+    {
+        "id": "7af773b3",
+        "name": "Acide chlorhydrique 37 % (2.5L)",
+        "brand": "VWR",
+        "model": "20252.324",
+        "type": "Réactifs chemiques",
+        "image_file": "product_7af773b3.png"
+    },
+    {
+        "id": "9c4e7263",
+        "name": "Acide citrique monohydrate (1KG)",
+        "brand": "Sigma aldrich",
+        "model": "27102",
+        "type": "Réactifs chemiques",
+        "image_file": "product_9c4e7263.jpeg"
+    },
+    {
+        "id": "0c764480",
+        "name": "Acide hydrofluorique 40% (1L)",
+        "brand": "Honeywell",
+        "model": "30103",
+        "type": "Réactifs chemiques",
+        "image_file": "product_0c764480.png"
+    },
+    {
+        "id": "a35047f5",
+        "name": "Acide sulfurique 95-97% (2.5L)",
+        "brand": "Honeywell",
+        "model": "7208",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a35047f5.png"
+    },
+    {
+        "id": "01033d87",
+        "name": "Acétone (2.5L)",
+        "brand": "Merck",
+        "model": "1.00014.2500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_01033d87.png"
+    },
+    {
+        "id": "9c82ae98",
+        "name": "Acétone extra pure (2.5L)",
+        "brand": "Honeywell",
+        "model": "32201",
+        "type": "Réactifs chemiques",
+        "image_file": "product_9c82ae98.png"
+    },
+    {
+        "id": "fcd45ac4",
+        "name": "Acétone ≥99.5% extra pure (2.5L)",
+        "brand": "VWR",
+        "model": "20065.327",
+        "type": "Réactifs chemiques",
+        "image_file": "product_fcd45ac4.png"
+    },
+    {
+        "id": "3f43afce",
+        "name": "Ammoniaque en solution 32% (1L)",
+        "brand": "Merck",
+        "model": "1054261000",
+        "type": "Réactifs chemiques",
+        "image_file": "product_3f43afce.png"
+    },
+    {
+        "id": "980e10d6",
+        "name": "Ammonium Sulfate (500G)",
+        "brand": "Biochem",
+        "model": "300940500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_980e10d6.png"
+    },
+    {
+        "id": "e132ebd7",
+        "name": "Ammonium chlorure extra pure (1KG)",
+        "brand": "VWR",
+        "model": "21236.291",
+        "type": "Réactifs chemiques",
+        "image_file": "product_e132ebd7.png"
+    },
+    {
+        "id": "80848329",
+        "name": "Ammonium molybdate Tetrahydraté (100G)",
+        "brand": "Biochem",
+        "model": "301340100",
+        "type": "Réactifs chemiques",
+        "image_file": "product_80848329.png"
+    },
+    {
+        "id": "5efe8d40",
+        "name": "Ammonium phosphate Monobasique (500G)",
+        "brand": "Biochem",
+        "model": "301360500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_5efe8d40.png"
+    },
+    {
+        "id": "a87c294a",
+        "name": "Anhydride acétique extra pure (2.5L)",
+        "brand": "Merck",
+        "model": "8222782500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a87c294a.png"
+    },
+    {
+        "id": "23efdcc4",
+        "name": "Argent Nitrate (100G)",
+        "brand": "CLCM",
+        "model": "CL169100",
+        "type": "Réactifs chemiques",
+        "image_file": "product_23efdcc4.png"
+    },
+    {
+        "id": "689245ef",
+        "name": "Argent Nitrate 0.1N (V/V) (1L)",
+        "brand": "CLCM",
+        "model": "CL1691K0.1",
+        "type": "Réactifs chemiques",
+        "image_file": "product_689245ef.png"
+    },
+    {
+        "id": "0ddf29f6",
+        "name": "Azomethine h-monosodium sel hydrate (5G)",
+        "brand": "Biochem",
+        "model": "101450005",
+        "type": "Réactifs chemiques",
+        "image_file": "product_0ddf29f6.png"
+    },
+    {
+        "id": "664dd148",
+        "name": "Baryum Chlorure Dihydraté (500G)",
+        "brand": "Biochem",
+        "model": "302030500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_664dd148.png"
+    },
+    {
+        "id": "04c89638",
+        "name": "Baryum chlorure di-hydrate (1KG)",
+        "brand": "VWR",
+        "model": "21716.290",
+        "type": "Réactifs chemiques",
+        "image_file": "product_04c89638.png"
+    },
+    {
+        "id": "4c6fa841",
+        "name": "Calcium chlorure anhydre (1KG)",
+        "brand": "CLCM",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_4c6fa841.png"
+    },
+    {
+        "id": "f9800de5",
+        "name": "Carbopol® 940 (1KG)",
+        "brand": "CLCM",
+        "model": "CLCP940.1K",
+        "type": "Réactifs chemiques",
+        "image_file": "product_f9800de5.png"
+    },
+    {
+        "id": "65ea3f36",
+        "name": "Chloroforme Ph. Eur., 99.0-99.4% (2.5L)",
+        "brand": "Honeywell",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_65ea3f36.png"
+    },
+    {
+        "id": "ec1949d9",
+        "name": "Chloroforme stabilisé à l’amylène AR/ACS (2.5L)",
+        "brand": "Fisher",
+        "model": "C",
+        "type": "Réactifs chemiques",
+        "image_file": "product_ec1949d9.png"
+    },
+    {
+        "id": "d4fed292",
+        "name": "Cholestérol extra pure",
+        "brand": "Biochem",
+        "model": "503210025",
+        "type": "Réactifs chemiques",
+        "image_file": "product_d4fed292.png"
+    },
+    {
+        "id": "f6a4c36e",
+        "name": "Cuivre II sulfate pentahydraté extra pure (250G)",
+        "brand": "VWR",
+        "model": "23174.233",
+        "type": "Réactifs chemiques",
+        "image_file": "product_f6a4c36e.png"
+    },
+    {
+        "id": "f6930f85",
+        "name": "D(+)-Glucose (250G)",
+        "brand": "CLCM",
+        "model": "CL18015.250",
+        "type": "Réactifs chemiques",
+        "image_file": "product_f6930f85.png"
+    },
+    {
+        "id": "8265d3b0",
+        "name": "D(-)-Mannitol 97.0-102.0% (1KG)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_8265d3b0.jpeg"
+    },
+    {
+        "id": "0683a5ee",
+        "name": "Dichlorométhane extra pure (2.5L)",
+        "brand": "VWR",
+        "model": "25631.327",
+        "type": "Réactifs chemiques",
+        "image_file": "product_0683a5ee.png"
+    },
+    {
+        "id": "05248a05",
+        "name": "Diphényle amine extra pure (100G)",
+        "brand": "Loba",
+        "model": "3501",
+        "type": "Réactifs chemiques",
+        "image_file": "product_05248a05.png"
+    },
+    {
+        "id": "ccbedad3",
+        "name": "Eau désionisée Type II – (l’eau pure) (5L)",
+        "brand": "CLCM",
+        "model": "CL1801.5KPT2",
+        "type": "Réactifs chemiques",
+        "image_file": "product_ccbedad3.png"
+    },
+    {
+        "id": "a5f1fddc",
+        "name": "Kit de dureté 15×60",
+        "brand": "IIS\nR",
+        "model": "KIT-TH",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a5f1fddc.jpg"
+    },
+    {
+        "id": "24c16744",
+        "name": "Ethanol 96% (2.5L)",
+        "brand": "Honeywell",
+        "model": "24106",
+        "type": "Réactifs chemiques",
+        "image_file": "product_24c16744.png"
+    },
+    {
+        "id": "30c5694e",
+        "name": "Ethanol 96% extra pure (5L)",
+        "brand": "CLCM",
+        "model": "CL4607.5K96",
+        "type": "Réactifs chemiques",
+        "image_file": "product_30c5694e.png"
+    },
+    {
+        "id": "ea6bfec4",
+        "name": "Ethanol absolue ≥99.8% ACS (2.5L)",
+        "brand": "VWR",
+        "model": "20821330",
+        "type": "Réactifs chemiques",
+        "image_file": "product_ea6bfec4.png"
+    },
+    {
+        "id": "4ccc922e",
+        "name": "Ether de pétrole 40-60° extra pure (2.5L)",
+        "brand": "Merck",
+        "model": "1.01775.2500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_4ccc922e.png"
+    },
+    {
+        "id": "088467cb",
+        "name": "Ether diéthylique (2.5L)",
+        "brand": "Honeywell",
+        "model": "24004",
+        "type": "Réactifs chemiques",
+        "image_file": "product_088467cb.png"
+    },
+    {
+        "id": "6c7f85ca",
+        "name": "Ethyle acétate (2.5L)",
+        "brand": "Honeywell",
+        "model": "33211",
+        "type": "Réactifs chemiques",
+        "image_file": "product_6c7f85ca.png"
+    },
+    {
+        "id": "d65d30dd",
+        "name": "Fer III Chlorure Anhydre (500G)",
+        "brand": "Biochem",
+        "model": "309070500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_d65d30dd.png"
+    },
+    {
+        "id": "06ac2f40",
+        "name": "Ferrocyanure de potassium  (500G)",
+        "brand": "TM media\nR",
+        "model": "631",
+        "type": "Réactifs chemiques",
+        "image_file": "product_06ac2f40.png"
+    },
+    {
+        "id": "63870eda",
+        "name": "Glycine 99.7-101% (1KG)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_63870eda.jpeg"
+    },
+    {
+        "id": "325a9165",
+        "name": "Iode Bi-sublimé",
+        "brand": "Choisir une optionSigma aldrichVWREffacer \n\n\n\n\n\n\nquantit",
+        "model": "facer",
+        "type": "Réactifs chemiques",
+        "image_file": "product_325a9165.png"
+    },
+    {
+        "id": "568c75db",
+        "name": "Magnésium sulfate heptahedrate (500G)",
+        "brand": "CLCM",
+        "model": "RS358",
+        "type": "Réactifs chemiques",
+        "image_file": "product_568c75db.png"
+    },
+    {
+        "id": "d26c90ba",
+        "name": "Methanol extra pure 99.7% (2.5L) Marque: Honeywell",
+        "brand": "Honeywell\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nMethanol extra pure 99",
+        "model": "24229",
+        "type": "Réactifs chemiques",
+        "image_file": "product_d26c90ba.png"
+    },
+    {
+        "id": "3da55ae4",
+        "name": "Methanol grade HPLC (2.5L)",
+        "brand": "Honeywell\nCertificats d",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_3da55ae4.png"
+    },
+    {
+        "id": "530a314e",
+        "name": "Méthyl orange indicateur coloré (25G)",
+        "brand": "Loba",
+        "model": "4670",
+        "type": "Réactifs chemiques",
+        "image_file": "product_530a314e.png"
+    },
+    {
+        "id": "269ba350",
+        "name": "N,N-Dimethylformamide (2.5L)",
+        "brand": "Merck",
+        "model": "1030532500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_269ba350.png"
+    },
+    {
+        "id": "7c3f981e",
+        "name": "Noir eriochrome T (100G)",
+        "brand": "VWR",
+        "model": "26002.183",
+        "type": "Réactifs chemiques",
+        "image_file": "product_7c3f981e.png"
+    },
+    {
+        "id": "b3b2ed52",
+        "name": "Noir soudan B (25G)",
+        "brand": "CLCM",
+        "model": "315060-0025",
+        "type": "Réactifs chemiques",
+        "image_file": "product_b3b2ed52.png"
+    },
+    {
+        "id": "eefeba84",
+        "name": "Oxyde de zinc 99-100.5% (1KG)",
+        "brand": "Sigma aldrich",
+        "model": "14439",
+        "type": "Réactifs chemiques",
+        "image_file": "product_eefeba84.png"
+    },
+    {
+        "id": "770e954e",
+        "name": "Peroxyde d’hydrogène 35% (1L)",
+        "brand": "CLCM",
+        "model": "CL3401.1K35",
+        "type": "Réactifs chemiques",
+        "image_file": "product_770e954e.png"
+    },
+    {
+        "id": "cd22c084",
+        "name": "Potassium carbonate extra pure (1KG)",
+        "brand": "VWR",
+        "model": "26726.297",
+        "type": "Réactifs chemiques",
+        "image_file": "product_cd22c084.png"
+    },
+    {
+        "id": "8a58a83e",
+        "name": "Potassium hydroxyde extra pure (1KG)",
+        "brand": "VWR",
+        "model": "26668.296",
+        "type": "Réactifs chemiques",
+        "image_file": "product_8a58a83e.png"
+    },
+    {
+        "id": "25c38f20",
+        "name": "Potassium iodure (1KG)",
+        "brand": "VWR",
+        "model": "26846.292",
+        "type": "Réactifs chemiques",
+        "image_file": "product_25c38f20.png"
+    },
+    {
+        "id": "3172cbcf",
+        "name": "Potassium phosphate dibasique (1KG)",
+        "brand": "VWR",
+        "model": "26930.293",
+        "type": "Réactifs chemiques",
+        "image_file": "product_3172cbcf.png"
+    },
+    {
+        "id": "8f9cdcd1",
+        "name": "Rouge de Méthyl (25G)",
+        "brand": "CLCM",
+        "model": "CL26930.025X",
+        "type": "Réactifs chemiques",
+        "image_file": "product_8f9cdcd1.png"
+    },
+    {
+        "id": "7aa3c8d3",
+        "name": "Sodium Dodecyl Sulfate (1KG)",
+        "brand": "Sigma aldrich",
+        "model": "L5750",
+        "type": "Réactifs chemiques",
+        "image_file": "product_7aa3c8d3.png"
+    },
+    {
+        "id": "a6654499",
+        "name": "Sodium Hydrogène Carbonate (1KG)",
+        "brand": "VWR",
+        "model": "27778.293",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a6654499.png"
+    },
+    {
+        "id": "a01ca1a9",
+        "name": "Sodium chlorure (1KG)",
+        "brand": "Sigma Aldrich",
+        "model": "31434",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a01ca1a9.png"
+    },
+    {
+        "id": "4116f7e2",
+        "name": "Sodium hydrogène carbonate extra pure (1KG)",
+        "brand": "CLCM",
+        "model": "CL8400.1K",
+        "type": "Réactifs chemiques",
+        "image_file": "product_4116f7e2.png"
+    },
+    {
+        "id": "5ecaed1f",
+        "name": "Sodium hydroxide en perles (1KG)",
+        "brand": "CLCM",
+        "model": "CL3999.1K",
+        "type": "Réactifs chemiques",
+        "image_file": "product_5ecaed1f.png"
+    },
+    {
+        "id": "6e2527c4",
+        "name": "Sodium phosphate dibasique (1KG)",
+        "brand": "VWR",
+        "model": "28026.292",
+        "type": "Réactifs chemiques",
+        "image_file": "product_6e2527c4.png"
+    },
+    {
+        "id": "c607961f",
+        "name": "Sodium phosphate monobasique anhydre (500G)",
+        "brand": "CLCMlabs\nCertificat d",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_c607961f.jpeg"
+    },
+    {
+        "id": "e566848f",
+        "name": "Sodium phosphate monobasique dihydraté (1KG)",
+        "brand": "VWR",
+        "model": "28015.294",
+        "type": "Réactifs chemiques",
+        "image_file": "product_e566848f.png"
+    },
+    {
+        "id": "828bfb5b",
+        "name": "Solution Acide Chlorhydrique (1mol/L V/V) prête à l’emploi  (1L)",
+        "brand": "CLCM",
+        "model": "CL3645.1K1M",
+        "type": "Réactifs chemiques",
+        "image_file": "product_828bfb5b.png"
+    },
+    {
+        "id": "7baa31e4",
+        "name": "Tetrahydrofurane (2.5L)",
+        "brand": "Merck",
+        "model": "1.09731.2500",
+        "type": "Réactifs chemiques",
+        "image_file": "product_7baa31e4.png"
+    },
+    {
+        "id": "acec0e9e",
+        "name": "Tetrahydrofurane extra pure (2.5L)",
+        "brand": "Honeywell",
+        "model": "87368",
+        "type": "Réactifs chemiques",
+        "image_file": "product_acec0e9e.png"
+    },
+    {
+        "id": "582f5343",
+        "name": "Toluène extra pure (2.5L)",
+        "brand": "Honeywell",
+        "model": "32249",
+        "type": "Réactifs chemiques",
+        "image_file": "product_582f5343.png"
+    },
+    {
+        "id": "65bd9b7d",
+        "name": "Xylenol orange AR (5G)",
+        "brand": "Tm media\nr",
+        "model": "2772",
+        "type": "Réactifs chemiques",
+        "image_file": "product_65bd9b7d.png"
+    },
+    {
+        "id": "a1353893",
+        "name": "sodium phosphate dibasique dihydrate (1KG)",
+        "brand": "Merck",
+        "model": "1.06580.1000",
+        "type": "Réactifs chemiques",
+        "image_file": "product_a1353893.jpg"
+    },
+    {
+        "id": "5d74ce82",
+        "name": "sodium phosphate dibasique dihydraté (1KG)",
+        "brand": "Sigma Aldrich",
+        "model": "4272",
+        "type": "Réactifs chemiques",
+        "image_file": "product_5d74ce82.png"
+    },
+    {
+        "id": "421ba52c",
+        "name": "Éthanol 96% extra pure, GPR RECTAPUR® (2.5L)",
+        "brand": "VWR\nCertificat d",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_421ba52c.png"
+    },
+    {
+        "id": "fa76c73f",
+        "name": "Solution tampon pH Certipur®",
+        "brand": "Merck",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_fa76c73f.jpg"
+    },
+    {
+        "id": "ea0a4002",
+        "name": "Solution étalon de conductivité CLCMlab",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\nConductivit",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_ea0a4002.jpeg"
+    },
+    {
+        "id": "6db7fd22",
+        "name": "Solution tampon pH CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\nSolution Tampon\n\nChoisir une optionpH 04pH 07pH 10pH 09pH 02Effacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_6db7fd22.jpeg"
+    },
+    {
+        "id": "17e4a98a",
+        "name": "Chlorure de potassium (1Kg)",
+        "brand": "CLCMlabs\nCertificat d",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_17e4a98a.jpeg"
+    },
+    {
+        "id": "c014f96a",
+        "name": "Acide Ortho phosphorique 85% (1L)",
+        "brand": "CLCMlabs\nT",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_c014f96a.jpeg"
+    },
+    {
+        "id": "3ba341d7",
+        "name": "Acide Borique PA extra pure",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\nConditionnement\n\nChoisir une option500Gr1KgEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_3ba341d7.jpeg"
+    },
+    {
+        "id": "ccb320e3",
+        "name": "Acide citrique Anhydre (1KG)",
+        "brand": "CLCMlabs\nT",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_ccb320e3.jpeg"
+    },
+    {
+        "id": "afb6c73a",
+        "name": "Etain extra pure (100Gr)",
+        "brand": "CLCMlabs\n\n\n\nRupture de stock\n\n\n\n\nUGS",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_afb6c73a.jpeg"
+    },
+    {
+        "id": "fa22a8b4",
+        "name": "2-Butanol (1L)",
+        "brand": "CLCMlabs\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_fa22a8b4.jpeg"
+    },
+    {
+        "id": "c4ab8ee8",
+        "name": "Acetonitrile, , grade HPLC, ≥99.9% (2.5L) VWR",
+        "brand": "VWR\nCertificat d",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_c4ab8ee8.jpg"
+    },
+    {
+        "id": "727d3750",
+        "name": "Acetonitrile,  grade HPLC, ≥99.9% (2.5L) Merck",
+        "brand": "Merck\nCertificat d",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": null
+    },
+    {
+        "id": "ddd119f0",
+        "name": "Methanol pour analyse  Marque: CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nMethanol pour analyse  Marque",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_ddd119f0.png"
+    },
+    {
+        "id": "8f27a0a6",
+        "name": "Tween 80 (1L)  Marque : CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nTween 80",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_8f27a0a6.jpeg"
+    },
+    {
+        "id": "d924345e",
+        "name": "Methanol grade gradient pour HPLC (4L) Marque: Merck",
+        "brand": "Merck\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nMethanol grade gradient pour HPLC",
+        "model": "N/A",
+        "type": "Réactifs chemiques",
+        "image_file": "product_d924345e.webp"
+    },
+    {
+        "id": "f5fca343",
+        "name": "Agar Agar déshydraté (250G)",
+        "brand": "Merck\n18",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_f5fca343.jpg"
+    },
+    {
+        "id": "67a5d83d",
+        "name": "Bouillon Nutritif déshydraté (500G)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_67a5d83d.jpg"
+    },
+    {
+        "id": "aa650c5b",
+        "name": "Bouillon Rappaport Vassiliadis soja déshydraté (RVS) (500G)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_aa650c5b.jpg"
+    },
+    {
+        "id": "706fc381",
+        "name": "Bouillon macConkey déshydratée (500G)",
+        "brand": "Merck\n22",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_706fc381.jpg"
+    },
+    {
+        "id": "1323345a",
+        "name": "Bouillon trypto caséine soja (TSB) déshydratée (500G)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_1323345a.jpg"
+    },
+    {
+        "id": "b29f6482",
+        "name": "Gélose Baird-Parker déshydratée (500G)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_b29f6482.jpg"
+    },
+    {
+        "id": "3213b5f5",
+        "name": "Gélose Chapman stone medium (500G)",
+        "brand": "CLCMlabs\n13",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_3213b5f5.jpg"
+    },
+    {
+        "id": "f563c3c7",
+        "name": "Gélose MRS déshydratée (500G) : Merck",
+        "brand": "Merck",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_f563c3c7.jpg"
+    },
+    {
+        "id": "12793a0b",
+        "name": "Gélose Plate Count Agar (PCA) déshydratée (500G)",
+        "brand": "CLCMlabs\n7",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_12793a0b.jpg"
+    },
+    {
+        "id": "b2b463c5",
+        "name": "Gélose R2A déshydratée (500G) : Merck",
+        "brand": "clcm",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_b2b463c5.jpg"
+    },
+    {
+        "id": "e2b69460",
+        "name": "Gélose Sabouraud au chloramphénicol déshydratée (500G)",
+        "brand": "UGS",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_e2b69460.jpg"
+    },
+    {
+        "id": "6ae6cf47",
+        "name": "Gélose Sabouraud déshydratée (500G)",
+        "brand": "Cat",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_6ae6cf47.jpg"
+    },
+    {
+        "id": "5e899b38",
+        "name": "Gélose VRBL déshydratée (500G)",
+        "brand": "Cat",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_5e899b38.jpg"
+    },
+    {
+        "id": "7c0d33f7",
+        "name": "Gélose au Cétrimide (500G)",
+        "brand": "Cat",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_7c0d33f7.jpg"
+    },
+    {
+        "id": "18c1003a",
+        "name": "Gélose macConkey déshydratée (500G) : CLCMlabs",
+        "brand": "liolifilchem",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_18c1003a.jpg"
+    },
+    {
+        "id": "6320dafb",
+        "name": "Gélose nutritive déshydratée (500G) : Merck",
+        "brand": "Merck",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_6320dafb.jpg"
+    },
+    {
+        "id": "679abb16",
+        "name": "Gélose trypto caséine soja (TSA) déshydratée : Merck (500G)",
+        "brand": "Merck",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_679abb16.jpg"
+    },
+    {
+        "id": "5c82be9e",
+        "name": "Potato Dextrose agar (500Gr) Marque : CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nPotato Dextrose agar",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_5c82be9e.jpeg"
+    },
+    {
+        "id": "94bd297b",
+        "name": "Gélose XLD (500G) Marque : CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nG",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_94bd297b.jpg"
+    },
+    {
+        "id": "1915af93",
+        "name": "Gélose M17 (500Gr) Marque: CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nG",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_1915af93.jpg"
+    },
+    {
+        "id": "f46a29a1",
+        "name": "Gélose Mueller Hinton (500Gr) Marque : Merck",
+        "brand": "Merck\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nG",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_f46a29a1.jpg"
+    },
+    {
+        "id": "e5b87ed5",
+        "name": "Gélose Tryptone bile X-glucuronide TBX (500Gr) Marque : Merck",
+        "brand": "Merck\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nG",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_e5b87ed5.jpg"
+    },
+    {
+        "id": "ef0f1f19",
+        "name": "Gélose Hektoen Enteric (500Gr) Marque : Merck",
+        "brand": "Merck\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nG",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_ef0f1f19.jpg"
+    },
+    {
+        "id": "692c1718",
+        "name": "Gélose Hektoen Enteric (500Gr) Marque : Merck",
+        "brand": "Merck\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nG",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_692c1718.jpg"
+    },
+    {
+        "id": "91814b67",
+        "name": "Streptococcus Selection Agar (500Gr) Marque : CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStreptococcus Selection Agar",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_91814b67.jpg"
+    },
+    {
+        "id": "15582536",
+        "name": "GN Enrichment Broth (500Gr) Marque : CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nGN Enrichment Broth",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_15582536.jpg"
+    },
+    {
+        "id": "61e8d0ef",
+        "name": "Selenite Cystine broth (500Gr) Marque : CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nSelenite Cystine broth",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_61e8d0ef.jpg"
+    },
+    {
+        "id": "28a4c419",
+        "name": "Vert brillant bile bouillon – BLBVB – (500g)  Marque: CLCMlabs",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nVert brillant bile bouillon",
+        "model": "N/A",
+        "type": "milieux de culture",
+        "image_file": "product_28a4c419.jpg"
+    },
+    {
+        "id": "b926efaf",
+        "name": "Agitateur magnétique chauffant MS300",
+        "brand": "Bante Instruments\nFiche Technique\n\n\n\nRupture de stock\n\n\n\n\nUGS",
+        "model": "MS300",
+        "type": "equipement de laboratoire",
+        "image_file": "product_b926efaf.jpg"
+    },
+    {
+        "id": "a77f0bfa",
+        "name": "Agitateur Vortex avancé ZX3",
+        "brand": "Velp\nDocumentation technique\n\n\n\nRupture de stock\n\n\n\n\nUGS",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_a77f0bfa.jpg"
+    },
+    {
+        "id": "b70fccc8",
+        "name": "Agitateur magnetique non chauffant (HANNA)",
+        "brand": "Hanna Instruments",
+        "model": "10000841",
+        "type": "equipement de laboratoire",
+        "image_file": "product_b70fccc8.jpg"
+    },
+    {
+        "id": "03cfa3dc",
+        "name": "Balance de précision portée max 6KG précision 0,1g",
+        "brand": "Radwag\nR",
+        "model": "WLC",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_03cfa3dc.jpg"
+    },
+    {
+        "id": "e1fb16fc",
+        "name": "Bec bunsen avec régulateur pour gaz Butane – propane",
+        "brand": "LabBox",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_e1fb16fc.jpg"
+    },
+    {
+        "id": "db79fb9c",
+        "name": "Chauffe Ballon",
+        "brand": "Unknown",
+        "model": "HME-IB",
+        "type": "equipement de laboratoire",
+        "image_file": "product_db79fb9c.jpg"
+    },
+    {
+        "id": "0ed5da3b",
+        "name": "Conductimètre de paillasse 0~200mS/cm, ±1°C",
+        "brand": "Bante\nR",
+        "model": "RS117",
+        "type": "equipement de laboratoire",
+        "image_file": "product_0ed5da3b.jpg"
+    },
+    {
+        "id": "687a4f64",
+        "name": "Distillateur de laboratoire 1L/H",
+        "brand": "Faithfull\nR",
+        "model": "WRZ-100",
+        "type": "equipement de laboratoire",
+        "image_file": "product_687a4f64.jpg"
+    },
+    {
+        "id": "e43cb635",
+        "name": "Micropipette variable",
+        "brand": "Choisir une optionAccumaxHinotekIsolabEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_e43cb635.jpg"
+    },
+    {
+        "id": "5f80723e",
+        "name": "PH mètre de paillasse 0-14 ±0.01pH",
+        "brand": "Biobase\nPlage de pH",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_5f80723e.jpg"
+    },
+    {
+        "id": "e0c1000d",
+        "name": "Pompe de laboratoire à vide 50L/min",
+        "brand": "Joanlab\nR",
+        "model": "RS115",
+        "type": "equipement de laboratoire",
+        "image_file": "product_e0c1000d.jpg"
+    },
+    {
+        "id": "5e07bf1c",
+        "name": "Thermo hygromètre de paillasse",
+        "brand": "Joanlab\nR",
+        "model": "RS-LABN53",
+        "type": "equipement de laboratoire",
+        "image_file": "product_5e07bf1c.jpg"
+    },
+    {
+        "id": "daf39f0e",
+        "name": "pH mètre stylo portable",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_daf39f0e.jpg"
+    },
+    {
+        "id": "20602ba5",
+        "name": "Thermomètre infrarouge portable -50 à +350°C",
+        "brand": "Joanlab\nR",
+        "model": "RS-LABN49",
+        "type": "equipement de laboratoire",
+        "image_file": "product_20602ba5.jpg"
+    },
+    {
+        "id": "82bdde2d",
+        "name": "Bouton piston de seringue",
+        "brand": "Agilent\nR",
+        "model": "19245-40030",
+        "type": "equipement de laboratoire",
+        "image_file": "product_82bdde2d.png"
+    },
+    {
+        "id": "80433f14",
+        "name": "Agitateur de laboratoire à hélice",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_80433f14.png"
+    },
+    {
+        "id": "1bc0b3fe",
+        "name": "Bain-marie thermostatique 02 rangés et 04 trous 12 L",
+        "brand": "R",
+        "model": "WB-12-4",
+        "type": "equipement de laboratoire",
+        "image_file": "product_1bc0b3fe.png"
+    },
+    {
+        "id": "607de796",
+        "name": "Centrifugeuse de laboratoire 12 × 15ml 4000r/min 2350Xg",
+        "brand": "Faithfull\nR",
+        "model": "FTD-4C",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_607de796.jpg"
+    },
+    {
+        "id": "852bd659",
+        "name": "AUTOCLAVE DIGITAL(24L) (50L)",
+        "brand": "Faithfull\nDemander un devis\n\n\n\n\nCat",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_852bd659.jpeg"
+    },
+    {
+        "id": "d678cf4f",
+        "name": "Modèle numérique de nettoyeur à ultrasons, avec minuterie et chauffage (15L)",
+        "brand": "Faithfull\nR",
+        "model": "FSF-060S",
+        "type": "equipement de laboratoire",
+        "image_file": "product_d678cf4f.png"
+    },
+    {
+        "id": "ece1b07f",
+        "name": "Étuve de séchage sous vide (52L)",
+        "brand": "Faithfull\nR",
+        "model": "DZ-BCII",
+        "type": "equipement de laboratoire",
+        "image_file": "product_ece1b07f.webp"
+    },
+    {
+        "id": "77d2ea8b",
+        "name": "Étuve de séchage de paillasse à température constante (18L)",
+        "brand": "Faithfull\n R",
+        "model": "WHL-25A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_77d2ea8b.jpg"
+    },
+    {
+        "id": "ce25ef27",
+        "name": "Incubateur de paillasse à température constante (18L)",
+        "brand": "Faithfull\nR",
+        "model": "WP-25A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_ce25ef27.webp"
+    },
+    {
+        "id": "34083d2d",
+        "name": "Incubateur à température constante (65L)",
+        "brand": "Faithfull\nR",
+        "model": "DH4000II",
+        "type": "equipement de laboratoire",
+        "image_file": "product_34083d2d.jpg"
+    },
+    {
+        "id": "01939dee",
+        "name": "Agitateur magnétique à quatre postes (1000ML)",
+        "brand": "Faithful\nDocumentation technique\nDemander un devis\n\n\n\n\n\nquantit",
+        "model": "SH-6",
+        "type": "equipement de laboratoire",
+        "image_file": "product_01939dee.png"
+    },
+    {
+        "id": "4249c457",
+        "name": "Compteur de colonies de bactérie F50-F150mm",
+        "brand": "Faithfull\nR",
+        "model": "FJ-3",
+        "type": "equipement de laboratoire",
+        "image_file": "product_4249c457.png"
+    },
+    {
+        "id": "64541491",
+        "name": "Spectrophotomètre UV-visible avec écran LCD rétro4.2, photomètre de précision 752N, longueur d’onde 200-1000 nm (2 nm)",
+        "brand": "Faithfull\nDemander un devis\n\n\n\n\nCat",
+        "model": "752",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_64541491.webp"
+    },
+    {
+        "id": "b34685e6",
+        "name": "Étuves de séchage à convection forcée",
+        "brand": "Faithfull\nR",
+        "model": "WGL-45B",
+        "type": "equipement de laboratoire",
+        "image_file": "product_b34685e6.webp"
+    },
+    {
+        "id": "71c8be27",
+        "name": "Appareil de tamissage",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_71c8be27.png"
+    },
+    {
+        "id": "539830ba",
+        "name": "Milwaukee MW102 PRO+ 2-in-1 pH & température avec ATC",
+        "brand": "Milwaukee\nManuel d",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_539830ba.jpg"
+    },
+    {
+        "id": "14c740b3",
+        "name": "Spectrophotomètre UV-Visible",
+        "brand": "SECOMAM\nR",
+        "model": "667",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_14c740b3.png"
+    },
+    {
+        "id": "8f2cbbe7",
+        "name": "Viscosimètre digitale",
+        "brand": "Biobase\nFiche Technique\n\n\n\nRupture de stock\n\n\n\n\nUGS",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_8f2cbbe7.jpg"
+    },
+    {
+        "id": "1e47279d",
+        "name": "Agitateur Vortex WiseMix VM-10",
+        "brand": "Daihan Scientific\nFiche Technique\n\n\n\nRupture de stock\n\n\n\n\nUGS",
+        "model": "M-10",
+        "type": "equipement de laboratoire",
+        "image_file": "product_1e47279d.jpg"
+    },
+    {
+        "id": "8aa76340",
+        "name": "Réfractomètre digital 0 to 85% Brix Milwaukee",
+        "brand": "Milwaukee\nManuel d",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_8aa76340.jpg"
+    },
+    {
+        "id": "40ceb3f8",
+        "name": "Balance de précision Portée 5Kg précision 0.1g",
+        "brand": "Joan Lab\nR",
+        "model": "JNB50001",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_40ceb3f8.jpg"
+    },
+    {
+        "id": "342b6a11",
+        "name": "Balance de précision Portée 2Kg précision 0.01g",
+        "brand": "Joan Lab\nR",
+        "model": "JNB20002",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_342b6a11.jpg"
+    },
+    {
+        "id": "c98728ac",
+        "name": "Densimètre en verre pour usage général",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_c98728ac.jpg"
+    },
+    {
+        "id": "d95c4086",
+        "name": "Réfractomètre digital Soonkoda 0 – 55% Brix",
+        "brand": "Unknown",
+        "model": "055",
+        "type": "equipement de laboratoire",
+        "image_file": "product_d95c4086.png"
+    },
+    {
+        "id": "c35ab571",
+        "name": "Congélateur de laboratoire -86°C",
+        "brand": "BIOBASE\nR",
+        "model": "BDF-86V108",
+        "type": "equipement de laboratoire",
+        "image_file": "product_c35ab571.jpg"
+    },
+    {
+        "id": "5f1367b1",
+        "name": "Réfractomètre ATC manuel testeur BRIX 0 -90%",
+        "brand": "ZUZI",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_5f1367b1.jpg"
+    },
+    {
+        "id": "b55e884d",
+        "name": "pH mètre portable PH-220",
+        "brand": "Biobase\nFiche Technique\n\n\n\n\n\nquantit",
+        "model": "H-220",
+        "type": "equipement de laboratoire",
+        "image_file": "product_b55e884d.avif"
+    },
+    {
+        "id": "6b7b78b9",
+        "name": "PH  metre de paillasse pH-25S",
+        "brand": "Unknown",
+        "model": "H-25",
+        "type": "equipement de laboratoire",
+        "image_file": "product_6b7b78b9.webp"
+    },
+    {
+        "id": "84b34d37",
+        "name": "pH-mètre de poche basique",
+        "brand": "Labbox\nFiche Technique\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_84b34d37.jpg"
+    },
+    {
+        "id": "0ca8eb5c",
+        "name": "Multi paramètre portable étanche pH/EC/TDS/°C HI98130",
+        "brand": "Hanna\nFiche Technique\n\n\n\n\n\nquantit",
+        "model": "98130",
+        "type": "equipement de laboratoire",
+        "image_file": "product_0ca8eb5c.jpg"
+    },
+    {
+        "id": "711f9d71",
+        "name": "Testeur 3en1 pour sol pH/ Luxmètre/ Humidité.",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_711f9d71.webp"
+    },
+    {
+        "id": "222097c1",
+        "name": "Agitateur magnétique chauffant max 5000ml  Marque: Faithful",
+        "brand": "Faithful\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nAgitateur magn",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_222097c1.avif"
+    },
+    {
+        "id": "dcf90304",
+        "name": "Agitateur magnétique non chauffant",
+        "brand": "Joanlab\nFiche Technique\n\n\n\n\n\n\n\ncapacit",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_dcf90304.jpeg"
+    },
+    {
+        "id": "37b12af5",
+        "name": "Agitateur aérien BJPX-OHS20 Volume: 20L",
+        "brand": "Biobase\nFiche Technique\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "equipement de laboratoire",
+        "image_file": "product_37b12af5.jpg"
+    },
+    {
+        "id": "38fbc106",
+        "name": "Agitateur magnétique chauffant max 5000ml",
+        "brand": "Faithful\nFSF",
+        "model": "Choisir",
+        "type": "equipement de laboratoire",
+        "image_file": "product_38fbc106.avif"
+    },
+    {
+        "id": "abe9f696",
+        "name": "Balance de précision WTC600  Capacité maximale : 600g",
+        "brand": "Radwag\nFiche Technique\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_abe9f696.jpg"
+    },
+    {
+        "id": "02771eda",
+        "name": "Balance de précision  Portée : 3 kg. Marque: Joan Lab",
+        "brand": "Joan Lab\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nBalance de pr",
+        "model": "N/A",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_02771eda.jpg"
+    },
+    {
+        "id": "2d50bb2f",
+        "name": "Balance de précision Portée : 500g  Lecture : 0.001g Marque: Joan Lab",
+        "brand": "Joan Lab\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nBalance de pr",
+        "model": "N/A",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_2d50bb2f.jpg"
+    },
+    {
+        "id": "c23cfd50",
+        "name": "Balance analytique:  FA2204N  Portée : 220g Lecture : 0.0001g  Marque: Faithful",
+        "brand": "Faithful\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nBalance analytique",
+        "model": "FA2204N",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_c23cfd50.webp"
+    },
+    {
+        "id": "1e0606d6",
+        "name": "Transformateur Shimadzu A-15",
+        "brand": "Shimadzu\n\n\n\n\n\nquantit",
+        "model": "A-15",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_1e0606d6.jpeg"
+    },
+    {
+        "id": "aae673ce",
+        "name": "Boite de pétrie 90mm (480/Boite)(importation)",
+        "brand": "Plastilab\nR",
+        "model": "RS909",
+        "type": "verrerie et consomables",
+        "image_file": "product_aae673ce.png"
+    },
+    {
+        "id": "ffcf6aff",
+        "name": "Boite de pétri en plastique Aseptique 90mm (C/500)",
+        "brand": "Dimed\nR",
+        "model": "230055",
+        "type": "verrerie et consomables",
+        "image_file": "product_ffcf6aff.png"
+    },
+    {
+        "id": "88d959a8",
+        "name": "Charlottes non tissées (B/100)",
+        "brand": "Technipharm\nR",
+        "model": "AR0028",
+        "type": "verrerie et consomables",
+        "image_file": "product_88d959a8.jpg"
+    },
+    {
+        "id": "bc7963f1",
+        "name": "Cuve en polystyrène pour UV-Vis jetable TO=1CM 3.5ml (100/pk)",
+        "brand": "Agilent\nR",
+        "model": "6610018800",
+        "type": "verrerie et consomables",
+        "image_file": "product_bc7963f1.jpg"
+    },
+    {
+        "id": "e40452c6",
+        "name": "Ecouvillon stérile (P/100)",
+        "brand": "Joanlab\nR",
+        "model": "LNDECO",
+        "type": "verrerie et consomables",
+        "image_file": "product_e40452c6.jpg"
+    },
+    {
+        "id": "d41b0915",
+        "name": "Embout Blanc 0.5 – 10µl (1000/S)",
+        "brand": "Joanlab\nR",
+        "model": "C970",
+        "type": "verrerie et consomables",
+        "image_file": "product_d41b0915.jpg"
+    },
+    {
+        "id": "b1f22ecc",
+        "name": "Embout Bleu 200-1000µl (500/S)",
+        "brand": "Joanlab\nR",
+        "model": "20200620",
+        "type": "verrerie et consomables",
+        "image_file": "product_b1f22ecc.jpg"
+    },
+    {
+        "id": "522341a5",
+        "name": "Embouts jaunes 5-200µl (1000/S)",
+        "brand": "Joanlab\nR",
+        "model": "C608",
+        "type": "verrerie et consomables",
+        "image_file": "product_522341a5.jpg"
+    },
+    {
+        "id": "a747cf09",
+        "name": "Filtre Membrane stérile en nitrate de cellulose quadriés 0.45µm, 47 mm (100/B)",
+        "brand": "Sartorius\nR",
+        "model": "11406-47-ACN",
+        "type": "verrerie et consomables",
+        "image_file": "product_a747cf09.jpg"
+    },
+    {
+        "id": "fc748dfa",
+        "name": "Filtre Seringue",
+        "brand": "Millipore\nR",
+        "model": "SLGN033NK",
+        "type": "verrerie et consomables",
+        "image_file": "product_fc748dfa.png"
+    },
+    {
+        "id": "3c385794",
+        "name": "Gants anti chaleur (Paire)",
+        "brand": "Joanlab\nR",
+        "model": "RS81B01",
+        "type": "verrerie et consomables",
+        "image_file": "product_3c385794.jpg"
+    },
+    {
+        "id": "0d8b178f",
+        "name": "Gants en Latex (S/M/L) B/100",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_0d8b178f.jpg"
+    },
+    {
+        "id": "370cd89d",
+        "name": "Lame porte objet bord coupé givrée qualité économique (50/B)",
+        "brand": "Isolab\nR",
+        "model": "075.05.002",
+        "type": "verrerie et consomables",
+        "image_file": "product_370cd89d.png"
+    },
+    {
+        "id": "39dbaf44",
+        "name": "Lamelles Couvre Objet 24x24mm (200/B)",
+        "brand": "Joanlab\nR",
+        "model": "GT201-2424",
+        "type": "verrerie et consomables",
+        "image_file": "product_39dbaf44.png"
+    },
+    {
+        "id": "de480c17",
+        "name": "Lunette de protection pour laboratoire",
+        "brand": "Joanlab\nR",
+        "model": "RSLUN",
+        "type": "verrerie et consomables",
+        "image_file": "product_de480c17.jpg"
+    },
+    {
+        "id": "3a3ef5f1",
+        "name": "Masque Chirurgical en tissu non tissé (B/100)",
+        "brand": "Technipharm\nR",
+        "model": "RS89",
+        "type": "verrerie et consomables",
+        "image_file": "product_3a3ef5f1.png"
+    },
+    {
+        "id": "c769d084",
+        "name": "Microplaque 96 puits fond rond avec couvercle",
+        "brand": "Joanlab\nR",
+        "model": "RS82",
+        "type": "verrerie et consomables",
+        "image_file": "product_c769d084.png"
+    },
+    {
+        "id": "0a252af2",
+        "name": "Papier PH en Bandelette (100/Boite)",
+        "brand": "Joanlab\nr",
+        "model": "RS-LAB115",
+        "type": "verrerie et consomables",
+        "image_file": "product_0a252af2.png"
+    },
+    {
+        "id": "150425d4",
+        "name": "Papier filtre plat qualitatif filtration moyenne",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_150425d4.png"
+    },
+    {
+        "id": "a091be95",
+        "name": "Papier pH en rouleau (5 Mètres)",
+        "brand": "Joanlab\nR",
+        "model": "RS-LABN112",
+        "type": "verrerie et consomables",
+        "image_file": "product_a091be95.jpg"
+    },
+    {
+        "id": "215e238e",
+        "name": "Papier tournesol (100/B)",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_215e238e.jpg"
+    },
+    {
+        "id": "6533258c",
+        "name": "Plaque CCM gel de silice 60 F254 (25/B)",
+        "brand": "Merck",
+        "model": "1055540001",
+        "type": "verrerie et consomables",
+        "image_file": "product_6533258c.jpg"
+    },
+    {
+        "id": "ae5043ea",
+        "name": "Pot stérile 60ml",
+        "brand": "Joanlab\nR",
+        "model": "SCR-601",
+        "type": "verrerie et consomables",
+        "image_file": "product_ae5043ea.png"
+    },
+    {
+        "id": "a8ff2500",
+        "name": "Tube gradué pour centrifugeuse 15ml",
+        "brand": "Joanlab\nR",
+        "model": "RS-B236",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_a8ff2500.jpg"
+    },
+    {
+        "id": "4980d9a3",
+        "name": "Vial insert, 250 µL, glass with polymer feet, Insert size: 5.6 x 30 mm,(100/pk)",
+        "brand": "Agilent\nR",
+        "model": "5181-1270",
+        "type": "verrerie et consomables",
+        "image_file": "product_4980d9a3.png"
+    },
+    {
+        "id": "cc6980e2",
+        "name": "Adaptateur pour distillation NS 14/23",
+        "brand": "Isolab\nR",
+        "model": "065.18.001",
+        "type": "verrerie et consomables",
+        "image_file": "product_cc6980e2.jpg"
+    },
+    {
+        "id": "eebbb652",
+        "name": "Adaptateur universel en verre à 2 cols avec cône NS 14/23",
+        "brand": "Isolab\nR",
+        "model": "065.43.001",
+        "type": "verrerie et consomables",
+        "image_file": "product_eebbb652.jpg"
+    },
+    {
+        "id": "d2aaa9bc",
+        "name": "Adaptateur pour distillation coudé NS 29/32",
+        "brand": "isolab\nR",
+        "model": "065.32.029",
+        "type": "verrerie et consomables",
+        "image_file": "product_d2aaa9bc.jpg"
+    },
+    {
+        "id": "2a102838",
+        "name": "Ampoule a decanter en verre borosilicaté 3.3 avec clé en PTFE",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_2a102838.png"
+    },
+    {
+        "id": "a16db1a8",
+        "name": "Appareil de Soxhlet",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_a16db1a8.png"
+    },
+    {
+        "id": "d849bae1",
+        "name": "Aspirateur manuel pour pipette (Pipette pump)",
+        "brand": "Labbox\n\n\n\nInformations compl",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_d849bae1.jpg"
+    },
+    {
+        "id": "d896c2e6",
+        "name": "Baguette en verre",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_d896c2e6.png"
+    },
+    {
+        "id": "11dc8ead",
+        "name": "Ballon Sphérique",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_11dc8ead.png"
+    },
+    {
+        "id": "50a94799",
+        "name": "Barreau magnétique",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_50a94799.png"
+    },
+    {
+        "id": "b169e81b",
+        "name": "Becher en PP avec poignée",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_b169e81b.png"
+    },
+    {
+        "id": "a7cd553d",
+        "name": "Becher en PP forme basse",
+        "brand": "Choisir une optionJoanlabIsolabEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_a7cd553d.png"
+    },
+    {
+        "id": "d1bee050",
+        "name": "Becher en verre boro 3.3 forme basse",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_d1bee050.png"
+    },
+    {
+        "id": "4749fb5d",
+        "name": "Becher en verre boro 3.3 forme haute",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_4749fb5d.png"
+    },
+    {
+        "id": "88ab2175",
+        "name": "Boite Porte embout jaunes 96 trous",
+        "brand": "Joanlab\nR",
+        "model": "RS110-10",
+        "type": "verrerie et consomables",
+        "image_file": "product_88ab2175.png"
+    },
+    {
+        "id": "d7b2cb78",
+        "name": "Burette en verre borosilicaté 3.3 class A robinet en PTFE",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_d7b2cb78.png"
+    },
+    {
+        "id": "e2968dc4",
+        "name": "Capsule en porcelaine forme basse 150ml",
+        "brand": "Joanlab\nR",
+        "model": "RS-V355",
+        "type": "verrerie et consomables",
+        "image_file": "product_e2968dc4.png"
+    },
+    {
+        "id": "e14ed7d0",
+        "name": "Creuset en porcelaine avec couvercle forme basse",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_e14ed7d0.png"
+    },
+    {
+        "id": "706559ec",
+        "name": "Cristallisoir en verre boro 3.3 cap",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_706559ec.png"
+    },
+    {
+        "id": "2c83cb33",
+        "name": "Cuve en Quartz 10mm pour UV/Vis",
+        "brand": "Purshee\nR",
+        "model": "PURSHUV10MM",
+        "type": "verrerie et consomables",
+        "image_file": "product_2c83cb33.png"
+    },
+    {
+        "id": "57b3c6af",
+        "name": "Densimètre 700-1000/0.010 (KG/M³)",
+        "brand": "R",
+        "model": "PH526",
+        "type": "verrerie et consomables",
+        "image_file": "product_57b3c6af.png"
+    },
+    {
+        "id": "894f9b81",
+        "name": "Egouttoir pour verrerie de laboratoire revêtement PE",
+        "brand": "Joanlab\nR",
+        "model": "6.281619",
+        "type": "verrerie et consomables",
+        "image_file": "product_894f9b81.png"
+    },
+    {
+        "id": "fc9dfe09",
+        "name": "Entonnoir en PP",
+        "brand": "Choisir une optionLabboxIsolabJoanlabEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_fc9dfe09.png"
+    },
+    {
+        "id": "e66d58c1",
+        "name": "Entonnoir en verre boro 3.3",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_e66d58c1.png"
+    },
+    {
+        "id": "f451bb4a",
+        "name": "Eprouvette en verre boro 3.3 avec bouchon classe A 500ml",
+        "brand": "VWR",
+        "model": "KAVA632432630043",
+        "type": "verrerie et consomables",
+        "image_file": "product_f451bb4a.png"
+    },
+    {
+        "id": "5c24e3e4",
+        "name": "Eprouvette en verre boro 3.3 classe A",
+        "brand": "Choisir une optionVWRIsolabLabboxEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_5c24e3e4.png"
+    },
+    {
+        "id": "2f600361",
+        "name": "Eprouvette en verre borosilicaté 3.3 classe B",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_2f600361.png"
+    },
+    {
+        "id": "79f804c0",
+        "name": "Eprouvette graduée en PP classe B 50ml",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_79f804c0.png"
+    },
+    {
+        "id": "1e9e8f69",
+        "name": "Erlenmeyer en verre col large",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_1e9e8f69.png"
+    },
+    {
+        "id": "4156eb34",
+        "name": "Erlenmeyer en verre col étroit",
+        "brand": "Choisir une optionJoanlabGlasscoTGIEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_4156eb34.png"
+    },
+    {
+        "id": "ebcd45c1",
+        "name": "Fiole Erlenmeyer Super Duty à col étroit",
+        "brand": "Duran\nR",
+        "model": "90957",
+        "type": "verrerie et consomables",
+        "image_file": "product_ebcd45c1.png"
+    },
+    {
+        "id": "ea859116",
+        "name": "Fiole jaugee en verre boro 3.3 avec bouchon Classe A",
+        "brand": "Choisir une optionJoanlabIsolabLabboxGlasscoVWRDuranEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_ea859116.png"
+    },
+    {
+        "id": "8f7445c0",
+        "name": "Fiole jaugée en verre brun boro 3.3 avec bouchon Classe A 5ml",
+        "brand": "Labbox\nR",
+        "model": "VFLA-005-002",
+        "type": "verrerie et consomables",
+        "image_file": "product_8f7445c0.png"
+    },
+    {
+        "id": "d82bd224",
+        "name": "Flacon ISO en verre borosilicaté 3.3 gradué",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_d82bd224.png"
+    },
+    {
+        "id": "7ee9d525",
+        "name": "Goupillon pour Ballon 270x80x40mm",
+        "brand": "Joanlab\nR",
+        "model": "C508",
+        "type": "verrerie et consomables",
+        "image_file": "product_7ee9d525.png"
+    },
+    {
+        "id": "8a5b65ce",
+        "name": "Goupillon pour Becher 240x120x80mm",
+        "brand": "Joanlab \nR",
+        "model": "C506",
+        "type": "verrerie et consomables",
+        "image_file": "product_8a5b65ce.png"
+    },
+    {
+        "id": "022ef654",
+        "name": "Goupillon pour éprouvette 370x170x21mm",
+        "brand": "Joanlab\nR",
+        "model": "C507",
+        "type": "verrerie et consomables",
+        "image_file": "product_022ef654.png"
+    },
+    {
+        "id": "8a6e5916",
+        "name": "Grand Support métallique à tige 250x160mm",
+        "brand": "Joanlab\nR",
+        "model": "RTMM-250-001X50",
+        "type": "verrerie et consomables",
+        "image_file": "product_8a6e5916.png"
+    },
+    {
+        "id": "fdcc6cca",
+        "name": "Micro spatule cuillère 230mm",
+        "brand": "quantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_fdcc6cca.bmp"
+    },
+    {
+        "id": "0385cc87",
+        "name": "Mortier avec pilon en porcelaine cap 100 ml",
+        "brand": "Joanlab\nr",
+        "model": "RS18B100",
+        "type": "verrerie et consomables",
+        "image_file": "product_0385cc87.png"
+    },
+    {
+        "id": "9515177e",
+        "name": "Mortier en verre avec pilon",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_9515177e.png"
+    },
+    {
+        "id": "4c3eaed6",
+        "name": "Noix de serrage en inox",
+        "brand": "Joanlab\nR",
+        "model": "RS207",
+        "type": "verrerie et consomables",
+        "image_file": "product_4c3eaed6.png"
+    },
+    {
+        "id": "831c59a9",
+        "name": "Pince a Creuset",
+        "brand": "Joanlab\nR",
+        "model": "C211",
+        "type": "verrerie et consomables",
+        "image_file": "product_831c59a9.png"
+    },
+    {
+        "id": "00f9265f",
+        "name": "Pince de laboratoire en bois",
+        "brand": "Joanlab\nR",
+        "model": "C208",
+        "type": "verrerie et consomables",
+        "image_file": "product_00f9265f.png"
+    },
+    {
+        "id": "061b61c9",
+        "name": "Pince pour becher en inox 300 mm",
+        "brand": "Joanlab\nR",
+        "model": "RS210-1",
+        "type": "verrerie et consomables",
+        "image_file": "product_061b61c9.png"
+    },
+    {
+        "id": "8a781386",
+        "name": "Pince pour burette",
+        "brand": "Joanlab\nR",
+        "model": "RS05",
+        "type": "verrerie et consomables",
+        "image_file": "product_8a781386.png"
+    },
+    {
+        "id": "6b317f4b",
+        "name": "Pipette en verre Jaugée classe A",
+        "brand": "Choisir une optionJoanlabLabboxEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_6b317f4b.png"
+    },
+    {
+        "id": "284436ab",
+        "name": "Pipette en verre graduée classe A",
+        "brand": "Choisir une optionLabboxIsolabJoanlabEffacer \n\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_284436ab.png"
+    },
+    {
+        "id": "e53babcf",
+        "name": "Pipette pasteur en plastique",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_e53babcf.png"
+    },
+    {
+        "id": "ec1df816",
+        "name": "Pissette de laboratoire en PP",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_ec1df816.png"
+    },
+    {
+        "id": "92c1d95f",
+        "name": "Poire pour pipetage universelle",
+        "brand": "Joanlab\nr",
+        "model": "RS216",
+        "type": "verrerie et consomables",
+        "image_file": "product_92c1d95f.png"
+    },
+    {
+        "id": "48013198",
+        "name": "Portoir pour 24 tubes à essais (Ø 25 mm)",
+        "brand": "Joanlab\nR",
+        "model": "TTSP-024-001",
+        "type": "verrerie et consomables",
+        "image_file": "product_48013198.png"
+    },
+    {
+        "id": "81e39a29",
+        "name": "Portoir pour pipettes vertical",
+        "brand": "Joanlab\nR",
+        "model": "RS281",
+        "type": "verrerie et consomables",
+        "image_file": "product_81e39a29.png"
+    },
+    {
+        "id": "7d1f2dfb",
+        "name": "Portoir pour tube a essai en pp",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_7d1f2dfb.png"
+    },
+    {
+        "id": "20ccf067",
+        "name": "Pulvérisateur en plastique 1000ml",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_20ccf067.png"
+    },
+    {
+        "id": "f70e04b7",
+        "name": "Support pour 12 boîtes de Pétri (Adaptable pour jarre)",
+        "brand": "Merck",
+        "model": "1070400001",
+        "type": "verrerie et consomables",
+        "image_file": "product_f70e04b7.png"
+    },
+    {
+        "id": "92834037",
+        "name": "Système de filtration sous vide en verre",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_92834037.png"
+    },
+    {
+        "id": "5b3d62dd",
+        "name": "Thermomètre a alcool",
+        "brand": "Thermo",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_5b3d62dd.png"
+    },
+    {
+        "id": "52d95066",
+        "name": "Thermomètre à mercure (-10 à 360 °C)",
+        "brand": "Joanlab\nr",
+        "model": "PH521-1",
+        "type": "verrerie et consomables",
+        "image_file": "product_52d95066.png"
+    },
+    {
+        "id": "6dd208d4",
+        "name": "Tige d’extraction magnétique extensible",
+        "brand": "Joanlab\nR",
+        "model": "MT-LAB102-A",
+        "type": "verrerie et consomables",
+        "image_file": "product_6dd208d4.png"
+    },
+    {
+        "id": "352e0e04",
+        "name": "Tube Eppendorf gradue 1,5 ml (500/S)",
+        "brand": "Joanlab\nR",
+        "model": "C989",
+        "type": "verrerie et consomables",
+        "image_file": "product_352e0e04.png"
+    },
+    {
+        "id": "e61f5eaf",
+        "name": "Tube a centrifugation 50 ml avec jupe",
+        "brand": "Joanlab\nR",
+        "model": "21404",
+        "type": "verrerie et consomables",
+        "image_file": "product_e61f5eaf.jpg"
+    },
+    {
+        "id": "b8d0cc81",
+        "name": "Tube en PP gradué pour centrifugeuse 50ml",
+        "brand": "Joanlab\nR",
+        "model": "RS-B340",
+        "type": "labo equipement de laboratoire",
+        "image_file": "product_b8d0cc81.jpg"
+    },
+    {
+        "id": "10ac15a5",
+        "name": "Tube à vis en verre fond plat (18*145mm-Vol 25ml) avec bouchon en aluminium (B/125)",
+        "brand": "Joanlab\nR",
+        "model": "C990",
+        "type": "verrerie et consomables",
+        "image_file": "product_10ac15a5.png"
+    },
+    {
+        "id": "815ccb6e",
+        "name": "Verre a pied en verre boro 3.3",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_815ccb6e.png"
+    },
+    {
+        "id": "119ba3df",
+        "name": "Verre de montre",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_119ba3df.png"
+    },
+    {
+        "id": "7f27e062",
+        "name": "flacon compte goutte de laboratoire",
+        "brand": "Joanlab\nR",
+        "model": "RS-V111",
+        "type": "verrerie et consomables",
+        "image_file": "product_7f27e062.png"
+    },
+    {
+        "id": "efc1da3d",
+        "name": "pince a 04 doigts métallique",
+        "brand": "Joanlab\nR",
+        "model": "RS203",
+        "type": "verrerie et consomables",
+        "image_file": "product_efc1da3d.png"
+    },
+    {
+        "id": "5d710f14",
+        "name": "pince a bout courbé en acier inoxydable pour bécher",
+        "brand": "Biochem",
+        "model": "10651542",
+        "type": "verrerie et consomables",
+        "image_file": "product_5d710f14.png"
+    },
+    {
+        "id": "7185f1cf",
+        "name": "Portoir pour pipette en bois",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_7185f1cf.png"
+    },
+    {
+        "id": "075fb885",
+        "name": "Microcellule Hellma 104.002-QS, longueur de trajet de 10 mm",
+        "brand": "Hellma\n\n\n\n\n\nquantit",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_075fb885.jpg"
+    },
+    {
+        "id": "fd270730",
+        "name": "Seringue en verre",
+        "brand": "Agilent\nR",
+        "model": "9301-1446",
+        "type": "verrerie et consomables",
+        "image_file": "product_fd270730.jpg"
+    },
+    {
+        "id": "98b73fd0",
+        "name": "Cartouches d’extraction en cellulose",
+        "brand": "CLCMlabs\n\n\n\n\n\n\n\nDimensions\n\nChoisir une option38",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_98b73fd0.jpg"
+    },
+    {
+        "id": "c233d208",
+        "name": "Barreau magnetique",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_c233d208.png"
+    },
+    {
+        "id": "cc57243f",
+        "name": "Parafilm 38m x10cm",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_cc57243f.png"
+    },
+    {
+        "id": "3ba37d6b",
+        "name": "Papier joseph, 350×500 mm en rame (B/500)",
+        "brand": "Unknown",
+        "model": "SP2PJ500F3550",
+        "type": "verrerie et consomables",
+        "image_file": "product_3ba37d6b.jpg"
+    },
+    {
+        "id": "ad4ca9b9",
+        "name": "Adaptateur universel en verre",
+        "brand": "ISOLAB\n\n\n\n\n\n\n\nAdaptateur universel en verre\n\nChoisir une optionAdaptateur pour distillation NS 14",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_ad4ca9b9.jpg"
+    },
+    {
+        "id": "272678bb",
+        "name": "Jarre d’anaérobiose et Anaerocult® avec support métallique",
+        "brand": "Merck Millipore\n\n\n\nRupture de stock\n\n\n\n\nUGS",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_272678bb.webp"
+    },
+    {
+        "id": "3b5d71fd",
+        "name": "Appareil Clevenger en verre boro 1000ml",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_3b5d71fd.jpg"
+    },
+    {
+        "id": "681e6477",
+        "name": "Fenêtres optiques circulaires en KBr (25x4mm)",
+        "brand": "Unknown",
+        "model": "roidis",
+        "type": "verrerie et consomables",
+        "image_file": "product_681e6477.png"
+    },
+    {
+        "id": "0d9aa6d6",
+        "name": "Eprouvette graduée en PP classe B",
+        "brand": "Unknown",
+        "model": "N/A",
+        "type": "verrerie et consomables",
+        "image_file": "product_0d9aa6d6.webp"
+    }
+]
+        
+        // Brand Logos for Carousel
+        const brands = [
+            "memmert","biobase","joanlab","faithful","hanna","axis","himedia"
+        ];//  merk honywell   fluka  vwr tm media biolab clcmlab cigmaAldrich biochem specilab fisher chemical 
+
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            initializePage();
+        });
+
+        function initializePage() {
+            displayFeaturedProducts();
+            displayAllProducts();
+            initializeCarousel();
+            populateBrandFilter();
+            
+            
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchProducts();
+                }
+            });
+        }
+
+        
+        function displayFeaturedProducts() {
+            const container = document.getElementById('featuredProducts');
+            const featured = products.slice(0, 6);
+            container.innerHTML = featured.map(product => createProductCard(product)).join('');
+
+            let index=0
+            const elements=document.querySelectorAll('.brand-logo')
+            function animation() {
+                setTimeout(() => {
+                    elements.forEach((x,i)=>{
+                        x.classList.toggle("brand-logo-anime",(index%elements.length) ==i)
+                    })
+                    requestAnimationFrame(animation) 
+                    index++   
+                }, 3000);
+                
+            }
+            animation()
+        }
+
+        
+        function displayAllProducts() {
+            const container = document.getElementById('allProducts');
+            container.innerHTML = products.map(product => createProductCard(product)).join('');
+        }
+
+       
+        function createProductCard(product) {
+            const imageSrc ="product_images/"+ product.image_file;
+            const fallbackImage = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E${product.name}%3C/text%3E%3C/svg%3E`;
+            
+            return `
+                <div class="product-card" onclick="openProductModal(${product.id})">
+                    <img src="${imageSrc}" 
+                         alt="${product.name} - ${product.brand} ${product.model}" 
+                         class="product-image"
+                         onerror="this.src='${fallbackImage}'"
+                         itemprop="image">
+                    <div class="product-info">
+                        <div class="product-brand">${product.brand}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-model">Modèle: ${product.model}</div>
+                        <button class="btn btn-secondary" onclick="event.stopPropagation(); openProductModal(${product.id})">
+                            Plus de Détails
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function initializeCarousel() {
+            const track = document.getElementById('carouselTrack');
+            const brandItems = brands.map(brand => `
+                <div class="carousel-item">
+                    <img src="assets/${brand.toLowerCase().replace(/\s+/g, '-')}.png"
+                         alt="${brand}" 
+                         onerror="this.parentElement.innerHTML='<strong>${brand}</strong>'">
+                </div>
+            `).join('');
+            track.innerHTML = brandItems + brandItems
+        }
+
+        
+        function populateBrandFilter() {
+            const select = document.getElementById('brandFilter');
+            const uniqueBrands = [...new Set(products.map(p => p.brand))].sort();
+            uniqueBrands.forEach(brand => {
+                const option = document.createElement('option');
+                option.value = brand;
+                option.textContent = brand;
+                select.appendChild(option);
+            });
+        }
+
+        
+        function filterProducts() {
+            const brandFilter = document.getElementById('brandFilter').value;
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            
+            const filtered = products.filter(product => {
+                const brandMatch = brandFilter === 'all' || product.brand === brandFilter;
+                const categoryMatch = categoryFilter === 'all' || product.type === categoryFilter;
+                return brandMatch && categoryMatch;
+            });
+            
+            const container = document.getElementById('allProducts');
+            container.innerHTML = filtered.map(product => createProductCard(product)).join('');
+        }
+
+        
+        function searchProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            if (!query) return;
+            
+            const results = products.filter(product => 
+                product.name.toLowerCase().includes(query)  ||
+                product.brand.toLowerCase().includes(query) ||
+                product.model.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query)
+            );
+            
+            showPage('products');
+            setTimeout(() => {
+                const container = document.getElementById('allProducts');
+                if (results.length > 0) {
+                    container.innerHTML = results.map(product => createProductCard(product)).join('');
+                } else {
+                    container.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 40px;">Aucun produit trouvé.</p>';
+                }
+            }, 100);
+        }
+
+        
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            document.getElementById('textra-ar').value= 'je suis intéressé par '+product.name+','+product.brand+','+product.model
+            document.getElementById('modalProductName').textContent = product.name;
+            document.getElementById('modalProductBrand').textContent = product.brand + ' ' + product.model;
+            document.getElementById('modalProductImage').src = product.image;
+            document.getElementById('modalProductImage').alt = `${product.name} - ${product.brand}`;
+            document.getElementById('modalProductImage').onerror = function() {
+                this.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23f0f0f0' width='600' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%23999'%3E${product.name}%3C/text%3E%3C/svg%3E`;
+            };
+            document.getElementById('modalBrandSpec').textContent = product.brand;
+            document.getElementById('modalModelSpec').textContent = product.model;
+            document.getElementById('modalCategorySpec').textContent = getCategoryName(product.category);
+            document.getElementById('modalDescription').textContent = product.description;
+            
+            document.getElementById('productModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.getElementById('orderForm').reset();
+        }
+
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const productName = document.getElementById('modalProductName').textContent;
+            const productBrand = document.getElementById('modalProductBrand').textContent;
+            
+            const data = Object.fromEntries(formData.entries());
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.innerHTML = '<span class="loading"></span> Envoi en cours...';
+            button.disabled = true;
+            emailjs.send("service_36l5t7t", "template_ynk3klf", data)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    
+                    showSuccessMessage('Votre demande a été envoyée avec succès! Nous vous contacterons bientôt.');
+                    
+                    closeModal();
+                    form.reset();
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    
+                    showErrorMessage('Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement.');
+                });
+        }
+
+        
+        function showErrorMessage(message) {
+            const div = document.createElement('div');
+            div.className = 'success-message';
+            div.style.background = '#dc3545';
+            div.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
+            document.body.appendChild(div);
+            
+            setTimeout(() => {
+                div.style.animation = 'slideInRight 0.5s reverse';
+                setTimeout(() => div.remove(), 500);
+            }, 4000);
+        }
+
+        
+        function showSuccessMessage(message) {
+            const div = document.createElement('div');
+            div.className = 'success-message';
+            div.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            document.body.appendChild(div);
+            
+            setTimeout(() => {
+                div.style.animation = 'slideInRight 0.5s reverse';
+                setTimeout(() => div.remove(), 500);
+            }, 3000);
+        }
+
+        
+        function getCategoryName(category) {
+            const categories = {
+                diagnostic: 'Réactifs chemiques',
+                labo: 'milieux de culture',
+                surgical: 'verrerie et consomables',
+                monitoring: 'equipement de laboratoire'
+            };
+            return categories[category] || category;
+        }
+
+        
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        
+        function showPage(page) {
+            const homePage = document.getElementById('homePage');
+            const productsPage = document.getElementById('productsPage');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            if (page === 'home') {
+                homePage.style.display = 'block';
+                productsPage.style.display = 'none';
+                navLinks[0].classList.add('active');
+                navLinks[2].classList.remove('active');
+            } else if (page === 'products') {
+                homePage.style.display = 'none';
+                productsPage.style.display = 'block';
+                navLinks[0].classList.remove('active');
+                navLinks[2].classList.add('active');
+                // Reset filters
+                document.getElementById('brandFilter').value = 'all';
+                document.getElementById('categoryFilter').value = 'all';
+                displayAllProducts();
+            }
+            
+            window.scrollTo(0, 0);
+            
+            // Close mobile menu
+            document.getElementById('navLinks').classList.remove('active');
+        }
+
+      
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && !href.includes('onclick')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
