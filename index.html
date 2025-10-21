@@ -2659,7 +2659,7 @@
             const fallbackImage = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E${product.name}%3C/text%3E%3C/svg%3E`;
             
             return `
-                <div class="product-card" onclick="openProductModal(${product.id})">
+                <div class="product-card" onclick="openProductModal('${product.id}')">
                     <img src="${imageSrc}" 
                          alt="${product.name} - ${product.brand} ${product.model}" 
                          class="product-image"
@@ -2669,7 +2669,7 @@
                         <div class="product-brand">${product.brand}</div>
                         <h3 class="product-name">${product.name}</h3>
                         <div class="product-model">Modèle: ${product.model}</div>
-                        <button class="btn btn-secondary" onclick="event.stopPropagation(); openProductModal(${product.id})">
+                        <button class="btn btn-secondary" onclick="event.stopPropagation(); openProductModal('${ product.id}')">
                             Plus de Détails
                         </button>
                     </div>
@@ -2741,19 +2741,19 @@
 
         
         function openProductModal(productId) {
-            const product = products.find(p => p.id === productId);
+            const product = products.find(p => p.id === productId );
             if (!product) return;
             document.getElementById('textra-ar').value= 'je suis intéressé par '+product.name+','+product.brand+','+product.model
             document.getElementById('modalProductName').textContent = product.name;
             document.getElementById('modalProductBrand').textContent = product.brand + ' ' + product.model;
-            document.getElementById('modalProductImage').src = product.image;
+            document.getElementById('modalProductImage').src ="product_images/"+ product.image_file;
             document.getElementById('modalProductImage').alt = `${product.name} - ${product.brand}`;
             document.getElementById('modalProductImage').onerror = function() {
                 this.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23f0f0f0' width='600' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%23999'%3E${product.name}%3C/text%3E%3C/svg%3E`;
             };
             document.getElementById('modalBrandSpec').textContent = product.brand;
             document.getElementById('modalModelSpec').textContent = product.model;
-            document.getElementById('modalCategorySpec').textContent = getCategoryName(product.category);
+            document.getElementById('modalCategorySpec').textContent = getCategoryName(product.type);
             document.getElementById('modalDescription').textContent = product.description;
             
             document.getElementById('productModal').style.display = 'block';
