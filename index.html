@@ -2617,7 +2617,9 @@
             displayAllProducts();
             initializeCarousel();
             populateBrandFilter();
-            
+            document.addEventListener("contextmenu",(e)=>{
+                e.preventDefault()
+            },false)
             
             document.getElementById('searchInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
